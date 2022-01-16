@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     <div class="header">
         <a href="signin.php" class="logo"> <img src="pic/logo.png" alt="উ প সং হা র" width="100"> </a>
-    </div>
+    </div> 
 
     <div class="wrapper">
     <div id="formContent">
@@ -109,6 +109,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <h2 class="active"> Sign In </h2>
 
     <!-- Icon -->
+    <div>
+    <script language = "javascript" type = "text/javascript">
+        document.write("W E L C O M E")
+    </script>
+    </div>
+    
     <div class="fadeIn first">
       <img src="pic/logo.png" id="icon" alt="উ প সং হা র" />
     </div>

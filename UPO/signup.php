@@ -113,7 +113,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <div class="wrapper">
     <div id="formContent"> 
-        <h2>Sign Up</h2>
+        <h2 class="active">Sign Up</h2>
 
         <div class="fadeIn first">
       <img src="pic/logo.png" id="icon" alt="উ প সং হা র" />

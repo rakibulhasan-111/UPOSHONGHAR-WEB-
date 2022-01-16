@@ -2,7 +2,17 @@
 
 	include('config/db_connect.php');
 
-	$sql = 'SELECT * FROM review';
+	
+
+?>
+
+<!DOCTYPE html>
+<html>
+    <?php include('templates/header.php'); 
+
+	$ck = $_SESSION["username"];
+	
+	$sql = "SELECT * FROM review WHERE email='$ck'";
 
 	$result = mysqli_query($conn, $sql);
 
@@ -11,25 +21,20 @@
 	mysqli_free_result($result);
 
 	mysqli_close($conn);
-
-?>
-
-<!DOCTYPE html>
-<html>
-    <?php include('templates/header.php'); ?>
+	?>
 
     <h2>! MY REVIEWS !</h2>
 
-	<div class="flex-container">
+	<div class="container">
 
 			<?php foreach($reviews as $review): ?>
 
-				<div class="wrapper">
+				
     			<div id="formContent">
 
 						<div>
-							<h6><?php echo htmlspecialchars($review['name']); ?></h6>
-                            <h6><?php echo htmlspecialchars($review['writer']); ?></h6>
+							<h3><?php echo htmlspecialchars($review['name']); ?></h3>
+                            <h3><?php echo htmlspecialchars($review['writer']); ?></h3>
 							<ul>
 								<?php foreach(explode(',', $review['review']) as $ing): ?>
 									<li><?php echo htmlspecialchars($ing); ?></li>
@@ -41,7 +46,7 @@
 						</div>
 
 				</div>
-				</div>
+
 
 			<?php endforeach; ?>
 			

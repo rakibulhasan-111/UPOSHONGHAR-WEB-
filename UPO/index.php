@@ -20,16 +20,16 @@
 
     <h2>! REVIEWS !</h2>
 
-	<div class="flex-container">
+	<div class="container">
 
 			<?php foreach($reviews as $review): ?>
 
-				<div class="wrapper">
+				
     			<div id="formContent">
 
 						<div>
-							<h6><?php echo htmlspecialchars($review['name']); ?></h6>
-                            <h6><?php echo htmlspecialchars($review['writer']); ?></h6>
+							<h3><?php echo htmlspecialchars($review['name']); ?></h3>
+                            <h3><?php echo htmlspecialchars($review['writer']); ?></h3>
 							<ul>
 								<?php foreach(explode(',', $review['review']) as $ing): ?>
 									<li><?php echo htmlspecialchars($ing); ?></li>
@@ -41,7 +41,7 @@
 						</div>
 
 				</div>
-				</div>
+				
 
 			<?php endforeach; ?>
 

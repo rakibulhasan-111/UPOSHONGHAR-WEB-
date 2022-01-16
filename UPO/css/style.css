@@ -9,20 +9,14 @@ center {
   text-align: center;
 }
 
-.flex-container {
+.container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 25px;
-}
-.flex-item {
-  background-color: lightgray;
-  background-position: center center;
-  background-size: cover;
-  margin: 2px;
-  flex: auto;
-  height: 240px;
-  flex-basis: 150px;
+  justify-content: space-around;
+  align-items: flex-end;
+  align-content: space-around;
+  padding: 20px;
 }
 
 .header {
